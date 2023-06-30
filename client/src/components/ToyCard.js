@@ -25,8 +25,8 @@ function ToyCard({ toy, onDeleteToy, onUpdateToy }) {
       },
       body: JSON.stringify(updateObj),
     })
-      .then((r) => r.json())
-      .then((updatedToy) => onUpdateToy(updatedToy));
+      //.then((r) => r.json())
+      .then(() => onUpdateToy({ ...toy, updateObj}))
   }
 
   return (
